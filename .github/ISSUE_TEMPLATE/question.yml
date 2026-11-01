@@ -1,0 +1,13 @@
+name: Ask a question
+description: How to do something with PaneLift, or anything else.
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: The [support page](https://wongfei2009.github.io/panelift-site/support) may already have the answer.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true

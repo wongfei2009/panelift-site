@@ -1,0 +1,37 @@
+name: Report a problem
+description: Something in PaneLift doesn't work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting it. The [support page](https://wongfei2009.github.io/panelift-site/support) has quick fixes for the most common problems.
+        Found a security problem? Don't post it here: open the [privacy and security form](https://github.com/wongfei2009/panelift-site/security/advisories/new) instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Your Mac
+      description: The model, the macOS version, and PaneLift for Mac's version (Settings › General).
+      placeholder: MacBook Pro M3, macOS 15.1, PaneLift 1.0
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Your iPhone or iPad
+      description: The model, and its iOS or iPadOS version.
+      placeholder: iPhone 16 Pro Max, iOS 26.1
+    validations:
+      required: true
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: How you connect (same Wi-Fi, USB cable, Direct Wireless, Remote Access), screenshots. A log helps too (PaneLift menu › Show Log…), but it names your windows and devices, so read it before you attach it.
