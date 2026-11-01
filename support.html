@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Help with PaneLift: permissions, finding your Mac, pairing, Direct Wireless Connection and more, and how to get in touch.">
+<meta name="description" content="Quick fixes for PaneLift: finding your Mac, pairing, permissions, the controls and more.">
 <title>PaneLift Support</title>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PaneLift">
 <meta property="og:url" content="https://wongfei2009.github.io/panelift-site/support">
 <meta property="og:title" content="PaneLift support">
-<meta property="og:description" content="How to connect, pair and stream with PaneLift, and where to write when something doesn’t work.">
+<meta property="og:description" content="Quick fixes for PaneLift: finding your Mac, pairing, permissions, the controls and more.">
 <meta property="og:image" content="https://wongfei2009.github.io/panelift-site/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PaneLift: any window from your Mac, on your iPhone and iPad">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=2026-10-10">
+<link rel="stylesheet" href="style.css?v=2026-11-01">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -30,172 +30,80 @@
 </header>
 
 <main>
-  <h1>Support</h1>
-  <p class="lede">Most problems have a quick fix below. If yours doesn’t, ask on <a href="https://github.com/wongfei2009/panelift-site/issues">GitHub</a>. Say which Mac and which iPhone or iPad you use, their system versions, and what happened.</p>
-  <p>Need PaneLift for Mac? <a href="download.html">Download it here</a>.</p>
+<h1>Support</h1>
+  <p class="lede">Quick fixes for the common problems. Still stuck? <a href="https://github.com/wongfei2009/panelift-site/issues">Ask on GitHub</a>, with your Mac, your iPhone or iPad, and their system versions.</p>
 
-  <h2 id="screen-recording">PaneLift can’t see your windows</h2>
-  <p>The PaneLift menu on your Mac says Screen Recording Is Off, or your iPhone or iPad connects but shows no windows.</p>
-  <ol>
-    <li>On your Mac, open System Settings › Privacy &amp; Security › Screen &amp; System Audio Recording. On macOS 14, it’s called Screen Recording.</li>
-    <li>Turn on PaneLift.</li>
-    <li>Quit PaneLift and open it again. macOS offers to do this for you.</li>
-  </ol>
-  <p>In PaneLift’s settings, Permissions has buttons that open these pages for you.</p>
+  <h2 id="not-listed">Your Mac isn’t listed</h2>
+  <ul>
+    <li>Check that PaneLift is running on your Mac: its icon is in the menu bar. To have it start by itself, turn on Launch at login in Settings › General.</li>
+    <li>Put both on the same Wi-Fi network. Guest and office networks often keep devices apart: use a USB cable or <a href="#direct-wireless">Direct Wireless</a> there.</li>
+    <li>Wake your Mac. A sleeping Mac can’t be reached.</li>
+    <li>Turn on Local Network for PaneLift: on your iPhone or iPad in Settings › Privacy &amp; Security › Local Network, and on macOS 15 or later in System Settings › Privacy &amp; Security › Local Network.</li>
+    <li>If your Mac is listed but won’t connect and its firewall is on, PaneLift’s Settings › General shows a warning with the Terminal command that unblocks it.</li>
+  </ul>
 
-  <h2 id="black-picture">The picture is black</h2>
-  <p>If your Mac’s windows show black on your iPhone or iPad, thumbnails too, your Mac’s display is probably asleep: macOS draws nothing new while it is. Wake it at your Mac with a key or the mouse, and the picture comes back.</p>
-  <p>To use PaneLift from another room, keep the display on longer: on your Mac, open System Settings › Lock Screen and choose when the display turns off when inactive. To keep your Mac itself awake, stop it from sleeping by itself in System Settings › Energy (Energy Saver on macOS 14), or Battery on a laptop.</p>
-  <!-- Display wake: for the release that ships it (PR #151); a republish before that release takes this paragraph out. -->
-  <p>PaneLift for Mac wakes your Mac’s display when your iPhone or iPad connects, and keeps it on while you use your Mac from the device, the way using your Mac does. Left alone, the display turns off by your Mac’s own setting and the picture goes black. To wake it again, move the pointer, scroll, or press the Command key on a keyboard attached to your iPhone or iPad: a tap wakes it too, but clicks your Mac where you can’t see, and Shift alone doesn’t reach your Mac. A locked Mac shows its lock screen. PaneLift can’t wake a Mac that’s asleep, or turn on the display of a laptop with its lid closed.</p>
-  <!-- /Display wake -->
+  <h2 id="pairing">Pairing</h2>
+  <p>Each iPhone or iPad pairs once. Tap your Mac, then scan the code your Mac shows or type its 12 digits. Over a USB cable it pairs by itself. Your Mac has to be unlocked.</p>
+  <ul>
+    <li>No code on your Mac? Choose Pair iPhone or iPad… in the PaneLift menu, then tap your Mac again.</li>
+    <li>Using your Mac through Screen Sharing? Turn on Show the pairing window to screen sharing, in Settings › Devices › Advanced.</li>
+    <li>Lost a device? Remove it in Settings › Devices on your Mac.</li>
+  </ul>
+
+  <h2 id="screen-recording">No windows, or a black picture</h2>
+  <ul>
+    <li>No windows: turn on PaneLift in System Settings › Privacy &amp; Security › Screen &amp; System Audio Recording, then reopen PaneLift.</li>
+    <li>A black picture: your Mac’s display is asleep. Move the pointer, or press Command on an attached keyboard. To keep it on longer, change when the display turns off in System Settings › Lock Screen.</li>
+  </ul>
 
   <h2 id="accessibility">Taps and typing don’t reach your Mac</h2>
-  <p>PaneLift needs Accessibility to click, scroll and type for you. On your Mac, open System Settings › Privacy &amp; Security › Accessibility and turn on PaneLift. It works right away.</p>
+  <p>Turn on PaneLift in System Settings › Privacy &amp; Security › Accessibility. It works right away.</p>
 
-  <h2 id="keyboard">Using a keyboard or trackpad with your iPhone or iPad</h2>
-  <p>With a keyboard attached to your iPhone or iPad, such as a Magic Keyboard, what you type goes to your Mac as soon as its picture shows, Esc and shortcuts included. You don’t need the Keyboard button. It brings up your device’s keyboard bar, and from there the on-screen keyboard. While PaneLift’s settings or Switch is open, your keys stay with it, so Esc closes it.</p>
-  <p>Over the picture, two fingers on the trackpad scroll the window under the pointer, and so does a mouse’s scroll wheel.</p>
-  <p>In Terminal, iTerm2 and other terminal apps on your Mac, Control-[ types the same as Esc.</p>
-  <!-- Other languages: for the release that ships it (PR #147); a republish before that release takes this paragraph out. -->
-  <p>To type in Chinese, Japanese, Korean or another language whose input method composes text, use the keyboards you set up on your iPhone or iPad in Settings › General › Keyboard. You compose and pick from the candidates on your device, and what you pick is typed on your Mac. Dictation types on your Mac too, in the languages you set up for it. With keyboards in two or more languages, Control-Space switches between them on your device; with one, it goes to your Mac.</p>
-  <!-- /Other languages -->
-
-  <!-- Reverse Scrolling: for the release that ships it (PR #159); a republish before that release takes this section out. -->
-  <h2 id="scrolling">Scrolling the other way</h2>
-  <p>Dragging a finger over the picture scrolls what’s under it the way your finger moves, as it does on your iPhone or iPad, and so do two fingers in pointer mode, when the whole picture is a trackpad. To turn both around, turn on Reverse Scrolling under This iPad (This iPhone on iPhone) in the settings panel on your iPhone or iPad. A trackpad or mouse connected to your iPad keeps scrolling the way its Natural Scrolling setting says, in Settings on your iPad.</p>
-  <!-- /Reverse Scrolling -->
-  <!-- Pinch zoom: for the release that ships it (PR #196); a republish before that release takes this section out. -->
-  <p>Pinch the picture with two fingers to zoom it, up to five times, around the point between your fingers. While it’s zoomed, two fingers move it and one finger still taps, clicks and scrolls on your Mac, on what you see under it. Pinch all the way out to see the whole picture again. Zooming happens on your iPhone or iPad only: your Mac’s window stays as it is.</p>
-  <!-- /Pinch zoom -->
-  <h2 id="controls">PaneLift’s controls</h2>
-  <p>The picture fills your iPhone or iPad, held either way. PaneLift’s controls float over it in one small pill: drag its grip to move it anywhere. Tap the grip to fold the pill into a small handle at the top of the screen, and tap the handle to bring it back. From left to right:</p>
+  <h2 id="controls">The controls</h2>
+  <p>Everything is in one pill floating over the picture. Drag its grip to move it; tap the grip to fold it away.</p>
   <ul>
-    <li><strong>Switch</strong> shows the Desktop, your open windows and the apps you can open, with a search field. Tap one to show it.</li>
-    <li><strong>Keyboard</strong> brings up the on-screen keyboard, and the button on top of it puts it away.</li>
-    <li><strong>Keys</strong> shows Esc, Tab, Control, Option, Command, Shift and the arrows. A modifier stays on for the next key or click.</li>
-    <li><strong>Touch</strong> or <strong>Pointer</strong>: in pointer mode the whole picture is a trackpad, with your Mac’s pointer on it.</li>
-    <li><strong>Menus</strong> lists the menus of the app you use, while your Mac sends them.</li>
-    <li><strong>Settings</strong> has the stream’s quality and your device’s own settings, and Disconnect at its foot.</li>
+    <li><strong>Switch</strong>: the Desktop, your windows and your apps. Touch and hold a window to close or minimize it.</li>
+    <li><strong>Keyboard</strong> and <strong>Keys</strong>: the on-screen keyboard, and Esc, Tab, Control, Option, Command and the arrows.</li>
+    <li><strong>Touch</strong> or <strong>Pointer</strong>: tap where you look, or use the whole screen as a trackpad.</li>
+    <li><strong>Menus</strong>: the menu bar of the app you’re using.</li>
+    <li><strong>Settings</strong>: quality, sound, clipboard, and Disconnect.</li>
   </ul>
-
-  <h2 id="window-controls">Closing or minimizing a window</h2>
-  <p>In Switch, touch and hold a window’s picture for Close, Minimize and Full Screen.</p>
-
-  <h2 id="mac-not-listed">Your Mac isn’t listed</h2>
-  <ul>
-    <li>Check that PaneLift is running on your Mac. Its icon is in the menu bar.</li>
-    <li>If your Mac restarted, PaneLift opens only once someone logs in to it. To have PaneLift open by itself then, choose Launch at Login in the PaneLift menu, or turn it on in PaneLift’s Settings › General.</li>
-    <li>Your Mac may be asleep. Your iPhone or iPad then doesn’t list it, or says it isn’t answering. Wake your Mac, then tap it on your iPhone or iPad if PaneLift doesn’t connect by itself. PaneLift may not be able to wake your Mac, so while you use PaneLift from another room, stop your Mac from sleeping by itself in System Settings › Energy (Energy Saver on macOS 14), or Battery on a laptop.</li>
-    <li>Put your Mac and your iPhone or iPad on the same Wi-Fi network. Guest networks, and many office and hotel networks, keep devices apart. There, use a USB cable or <a href="#direct-wireless">Direct Wireless Connection</a>.</li>
-    <li>Connect your iPhone or iPad to your Mac with a USB cable. Your Mac then shows as Wired.</li>
-    <li>Check that Local Network is on for PaneLift on both, as below.</li>
-    <li class="command">If your iPhone or iPad lists your Mac but can’t connect to it, and the firewall is on in System Settings › Network › Firewall on your Mac, the firewall may be blocking PaneLift even though it shows PaneLift as allowed: it can keep one rule for PaneLift and another for the program inside it. To unblock that program, open Terminal on your Mac, run <code>sudo /usr/libexec/ApplicationFirewall/socketfilterfw <span class="option">--unblockapp</span> /Applications/Sill.app/Contents/MacOS/Sill</code> and enter your Mac’s password.
-    <!-- Firewall: for the release that ships it (PR #250); a republish before that release takes this sentence out. -->
-    PaneLift for Mac says so in its menu, as Devices Can’t Connect, and in its Settings › General, with the command to copy.
-    <!-- /Firewall -->
-    </li>
-  </ul>
-
-  <h2 id="local-network">Local Network is off</h2>
-  <p>If PaneLift on your iPhone or iPad asks you to allow Local Network, open Settings › Privacy &amp; Security › Local Network and turn on PaneLift.</p>
-  <p>On a Mac with macOS 15 or later, also open System Settings › Privacy &amp; Security › Local Network and turn on PaneLift.</p>
-
-  <h2 id="pairing">Pairing your iPhone or iPad</h2>
-  <p>Each iPhone or iPad pairs with your Mac once. After that, only the devices you paired can connect, and every connection is encrypted.</p>
-  <ol>
-    <li>On your iPhone or iPad, tap your Mac. It says Not paired.</li>
-    <li>Your Mac opens a window with a code. Point your iPhone or iPad at it, or tap Enter Code Instead and type the 12 digits.</li>
-  </ol>
-  <p>Over a USB cable, your Mac shows as Wired. Tap it, and the device pairs by itself, with no code, while your Mac is unlocked.</p>
-  <p>If it doesn’t work:</p>
-  <ul>
-    <li><strong>Your Mac didn’t show a code.</strong> Choose Pair iPhone or iPad… in the PaneLift menu on your Mac, then tap your Mac again. After you click Cancel in that window, or after five wrong codes, your Mac waits 10 minutes before it opens the window for that device by itself again.</li>
-    <!-- Pairing window: for the release that ships it (PR #157); a republish before that release takes this item out. -->
-    <li><strong>You use your Mac through Screen Sharing or another remote desktop app, and the code doesn’t show there.</strong> Turn on Show the pairing window to screen sharing in PaneLift’s Settings › Devices on your Mac; while it’s on, anyone who can see your Mac’s screen remotely can read the code.</li>
-    <!-- /Pairing window -->
-    <li><strong>Your iPhone or iPad asks you to unlock your Mac.</strong> Your Mac pairs a device only while it’s unlocked.</li>
-    <li><strong>Your iPhone or iPad says Update PaneLift beside your Mac.</strong> Your Mac has PaneLift for Mac 0.3.1 or earlier, from before pairing at home. Update it: <a href="download.html">download the newest version</a>, or choose the item in the PaneLift menu that says a newer version is available.</li>
-    <li><strong>The PaneLift menu on your Mac says An iPhone or iPad Needs PaneLift Updated.</strong> An iPhone or iPad with an older PaneLift tried to connect. Update PaneLift on it.</li>
-    <li><strong>Your iPhone or iPad says your Mac removed it.</strong> It was removed in PaneLift’s Settings › Devices on your Mac. Tap your Mac to pair it again.</li>
-  </ul>
-  <p>PaneLift’s Settings › Devices on your Mac lists the devices you paired. Remove one you no longer use, or have lost. Leave Require pairing on: with it off, any device on your network, and any app on your Mac, can see and control your Mac without pairing.</p>
-
-  <h2 id="direct-wireless">Direct Wireless Connection</h2>
-  <p>Direct Wireless Connection lets an iPhone or iPad near your Mac connect without a shared Wi-Fi network, the way AirDrop does.</p>
-  <ul>
-    <li>Turn it on in the PaneLift menu on your Mac, or in PaneLift’s settings under General. An iPhone or iPad you paired can also turn it on or off in its settings panel<!-- Remote Access: take this out for a release without Remote Access. -->, but not while it’s connected through Remote Access<!-- /Remote Access -->.</li>
-    <li>If nothing is listed on your iPhone or iPad, tap Search Nearby. Your Mac then shows as Direct.<!-- Remote Access: take this out for a release without Remote Access. --> An iPhone or iPad you already paired lists your Mac as Remote instead, with no Search Nearby: it looks for your Mac nearby by itself only if Direct Wireless Connection was on the last time the two connected on the same network or over a USB cable (a connection through a VPN doesn’t count). If it wasn’t, connect them once over a USB cable while it’s on, then unplug.<!-- /Remote Access --></li>
-    <li>Leave it off when your devices share a network. While it’s on, the Wi-Fi on your Mac keeps stepping away from its network, and streams over Wi-Fi can stutter.</li>
-    <li>While it’s on, anyone nearby with PaneLift can find your Mac. Only devices you paired can connect, unless you turn off Require pairing.</li>
-  </ul>
-
-  <!-- Remote Access: take this section out for a release without Remote Access. -->
-  <h2 id="remote-access">Remote Access</h2>
-  <p>Remote Access lets you use your Mac away from home, through your own VPN, such as Tailscale, or through a port you forward on your router. Only devices you paired can connect this way, and the connection is encrypted. Away from home, PaneLift starts at a lower quality that a slower connection can carry, and your iPhone or iPad tells you when the connection can’t keep up. When you get home, the session moves to your network by itself.</p>
-  <ol>
-    <li>On your Mac, choose Remote Access… in the PaneLift menu and turn on Remote Access. For a port you forward on your router instead of a VPN, also turn on Allow connections from the internet there, and forward the port it names.</li>
-    <li>Pair each iPhone or iPad once, at home (above), and connect it to your Mac at home once while Remote Access is on: that is how it learns where to find your Mac from other networks. A device that has never connected at home: on your Mac, choose Pair iPhone or iPad… in the PaneLift menu, then on your device, tap Add a Mac… and point it at the code.</li>
-    <li>Away from home, turn on your VPN on your device and tap your Mac.</li>
-  </ol>
-  <p>If it doesn’t connect:</p>
-  <ul>
-    <li>Your Mac has to be awake, with PaneLift running and its VPN on. PaneLift can’t wake a sleeping Mac. To keep it reachable, stop it from sleeping in System Settings › Energy (Energy Saver on macOS 14), or Battery on a laptop.</li>
-    <li>Check that your VPN is on on your iPhone or iPad too.</li>
-    <li>If your iPhone or iPad says your Mac didn’t answer although your Mac is awake, connect them at home once with Remote Access on, then try again away.</li>
-    <li>If your device says your Mac no longer accepts it, it was removed on your Mac. Pair it again.</li>
-  </ul>
-  <!-- /Remote Access -->
+  <p>Pinch to zoom in, up to five times. A keyboard attached to your device types on your Mac directly, shortcuts included, and your device’s own keyboards type any language.</p>
 
   <h2 id="virtual-display">A window left your Mac’s screen</h2>
-  <p>While Virtual Display is on in PaneLift for Mac, the window your iPhone or iPad shows moves onto a display of its own, an invisible screen sized for your device, so it keeps updating when other windows cover it. It comes back where it was when you switch to another window or to the Desktop, disconnect, or quit PaneLift. To keep your windows on your Mac’s screen, turn off Virtual Display in the PaneLift menu or in PaneLift’s Settings › Virtual Display. If PaneLift for Mac stopped without quitting, for example after Force Quit, macOS puts the window back on your screen, though not always where it was.</p>
-  <!-- Virtual Display: for the release that turns it on by default (PR #236); a republish before that release takes this paragraph out. -->
-  <p>Virtual Display is on unless you turn it off.</p>
-  <!-- /Virtual Display -->
+  <p>With Virtual Display on, the window you’re using moves onto an invisible display sized for your device, so it stays sharp and keeps updating. It comes back when you switch windows, disconnect or quit. To keep windows in place, turn off Virtual Display in the PaneLift menu or in Settings › Streaming.</p>
 
-  <h2 id="window-size">A window on your Mac changed size</h2>
-  <p>While Virtual Display is on, the window you use is sized to fit your iPhone or iPad on its own display, and gets its size and place back when you switch to another window or to the Desktop, disconnect, or quit PaneLift. With Virtual Display off, PaneLift leaves the window’s size alone. If PaneLift for Mac stopped without quitting, for example after Force Quit, resize the window yourself.</p>
+  <h2 id="clipboard">Copy and paste</h2>
+  <p>With Share clipboard on, text you copy on your Mac is ready to paste on your device. To send text the other way, tap Paste in PaneLift. Only text, and only while connected. If nothing arrives from your Mac, Settings › General says what macOS needs.</p>
 
-  <!-- Clipboard: for the release that ships it (PR #78); a republish before that release takes this section out. -->
-  <h2 id="clipboard">Copy and paste between your Mac and your iPhone or iPad</h2>
-  <p>While Share Clipboard is on, text you copy on your Mac while your iPhone or iPad is connected is ready to paste on the device. To paste on your Mac what you copied on your iPhone or iPad, come back to PaneLift and tap Paste, on the note over the picture or in the settings panel: the text goes where your Mac’s cursor is, as if you had pressed ⌘V there. If you’d rather press ⌘V yourself, turn off Paste on … Right Away (the switch names your Mac), under Share Clipboard in the settings panel: Paste then only puts the text on your Mac’s clipboard. PaneLift never reads your iPhone or iPad’s clipboard by itself.</p>
+  <h2 id="sound">Sound (beta)</h2>
+  <p>Your device plays the sound of what you’re looking at, and your Mac keeps playing it too. Turn it off with Send Audio in the PaneLift menu, or mute one device in its own settings.</p>
+
+  <h2 id="direct-wireless">Direct Wireless</h2>
+  <p>Connects your device to a Mac nearby with no shared network, like AirDrop. Turn it on in the PaneLift menu, then tap Search Nearby on your device. Leave it off at home: it can make Wi-Fi streaming stutter.</p>
+
+  <h2 id="remote-access">Remote Access</h2>
+  <p>Use your Mac from anywhere through your own VPN, such as Tailscale. Choose Remote Access… in the PaneLift menu and turn it on, connect your device at home once so it learns the way, then turn on the VPN on your device when you’re away. Your Mac has to stay awake: set that in System Settings › Energy, or Battery on a laptop.</p>
+
+  <h2 id="lag">The picture stutters or lags</h2>
   <ul>
-    <li>Both apps have the switch: Share clipboard with devices in PaneLift’s Settings › General on your Mac, and Share Clipboard in the settings panel on your iPhone or iPad.</li>
-    <li>Only text goes, up to 256 KB at a time, and only what you copy while a device is connected. Text that came to your Mac from another of your devices through Universal Clipboard stays on your Mac; a password manager’s copies go like any other.</li>
-    <li>Text from your Mac stays on your iPhone or iPad’s clipboard for 10 minutes.</li>
-    <li>Paste presses ⌘ with the key that is V on a U.S. keyboard. If your Mac uses a keyboard layout that puts V somewhere else for shortcuts, such as Dvorak, turn off Paste on … Right Away and press ⌘V yourself.</li>
-    <li>If nothing arrives, update PaneLift on both: an older PaneLift on either side doesn’t share the clipboard.</li>
-    <li>If what you copy on your Mac doesn’t arrive, look under Share clipboard with devices in PaneLift’s Settings › General on your Mac. When macOS asks before apps read the clipboard, PaneLift says so there and takes you to where you allow it: Paste from Other Apps, in System Settings › Privacy & Security.</li>
+    <li>Choose a lower Quality, in the PaneLift menu or on your device.</li>
+    <li>Use a USB cable or 5 GHz Wi-Fi, and leave Direct Wireless off.</li>
   </ul>
-  <!-- /Clipboard -->
-
-  <!-- Sound: for the release that ships it (PR #94); a republish before that release takes this section out. -->
-  <h2 id="sound">Sound from your Mac (beta)</h2>
-  <p>Sound is a beta, on by default. To turn it off or on: on your Mac, choose Send Audio (Beta) in the PaneLift menu, or in PaneLift’s Settings › Streaming; or on your iPhone or iPad, Send Audio in PaneLift’s settings panel. Either way it is on or off for every connected iPhone or iPad, which plays the sound of what it shows, the window’s app or every app for the Desktop, a moment behind the picture, and your Mac keeps playing it too. To silence it on one device, turn on Mute in that device’s settings panel. It plays when your iPhone or iPad is set to silent, as a video does, and unplugging headphones mutes it. AirPods and other Bluetooth headphones add a delay of their own, about a fifth of a second, so the sound trails the picture a little more. If you hear nothing, update PaneLift on both: an older PaneLift on either side has no sound.</p>
-  <!-- /Sound -->
-
-  <h2 id="stutter">The picture stutters or lags</h2>
-  <ul>
-    <li>Pick a lower Quality in the settings panel on your iPhone or iPad, or in the PaneLift menu on your Mac.<!-- Remote Access: take this sentence out for a release without Remote Access. --> Away from home, PaneLift streams at a quality of its own, which the PaneLift menu doesn’t change: lower it in the settings panel on your iPhone or iPad, tap the quality it suggests when the connection can’t keep up, or set it in PaneLift’s Settings › Streaming under Away from home.<!-- /Remote Access --></li>
-    <li>Use a USB cable, or 5 GHz Wi-Fi.</li>
-    <li>Turn off Direct Wireless Connection if you don’t need it.</li>
-  </ul>
-
-  <h2 id="desktop-fit">Black bars around the Desktop</h2>
-  <p>Your Mac’s screen has another shape than your iPhone or iPad, so its Desktop shows with black bars. With Desktop Fits This iPhone (This iPad on iPad) on, in the settings panel on your device, PaneLift for Mac shows the Desktop on an extra display of your device’s shape beside your Mac’s own, so it fills the picture, and brings the window in front onto it. Your Mac’s own displays don’t change.</p>
 
   <h2 id="log">Sending a log</h2>
-  <p>A log helps with problems that aren’t listed here. On your Mac, choose Show Log… in the PaneLift menu, or open the PaneLift folder in Library/Logs in your home folder. The log lists your window names, device names and network addresses, never what you copy, so read it before you send it.</p>
+  <p>Choose Show Log… in Settings › General. It lists window and device names and network addresses, never what you copy, so read it before you send it.</p>
 </main>
 
 <footer class="site-footer">
   <nav aria-label="Footer">
     <a href="index.html">Home</a>
     <a href="download.html">Download</a>
+    <a href="support.html">Support</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
-    <a href="support.html">Support</a>
   </nav>
+  <p class="muted small">PaneLift is made by Fei Wong, from <a href="https://github.com/Saffsanity/sill">Sill</a> by Noah Saffer.</p>
 </footer>
 </body>
 </html>
