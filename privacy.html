@@ -31,7 +31,7 @@
 
 <main>
 <h1>Privacy Policy</h1>
-  <p class="muted">Last updated November 1, 2026</p>
+  <p class="muted">Last updated November 3, 2026</p>
   <p class="lede">PaneLift collects nothing. There is no account and no server: everything travels only between your own devices, and nothing is sent to the developer.</p>
 
   <h2>The short version</h2>
@@ -47,7 +47,7 @@
   <p>Over your network, a USB cable, or your own VPN with Remote Access:</p>
   <ul>
     <li><strong>From your Mac:</strong> the picture of what you’re viewing; the names, previews and icons of your windows and apps; the menus of the app you’re using; the pointer; with Share clipboard on, text you copy; with Send Audio on, the sound; and its PaneLift version. Nothing is recorded or saved.</li>
-    <li><strong>From your iPhone or iPad:</strong> your taps, keys and gestures; which window or app to show; its screen size and settings; text when you tap Paste; its PaneLift version; and once a second while connected, a short report of frame rate, timing and its model, such as “iPad (iPad14,1)”.</li>
+    <li><strong>From your iPhone or iPad:</strong> your taps, keys and gestures; the words of voice typing, as text; which window or app to show; its screen size and settings; text when you tap Paste; its PaneLift version; and once a second while connected, a short report of frame rate, timing and its model, such as “iPad (iPad14,1)”.</li>
   </ul>
   <p>When you pair, the two exchange names, the device’s model and public keys. Over a USB cable, your Mac keeps a code made from the device’s serial number, never the number itself. With Remote Access on, your Mac tells paired devices its VPN addresses.</p>
 
@@ -57,13 +57,16 @@
     <li><strong>On your iPhone or iPad:</strong> your settings; the Macs you paired, with their names, keys and addresses; the device’s pairing key, in its keychain; and a small picture of each Mac’s screen for its tile, kept out of backups.</li>
   </ul>
 
+  <h2>Voice typing</h2>
+  <p>While you hold the mic, your iPhone or iPad turns what you say into text with Apple’s speech recognition, and only the text goes to your Mac. Where the device can recognize the language itself, the audio never leaves it; for a language it can’t, the device sends the audio to Apple to recognize, as iOS dictation does, under <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>. Nothing is recorded or kept, and nothing reaches the developer. Turn it off in PaneLift’s Settings, under Voice Typing.</p>
+
   <h2>Update check</h2>
   <p>Once a day, and when you click Check Now, PaneLift for Mac asks GitHub (api.github.com) for the newest release. GitHub sees your Mac’s IP address and PaneLift’s version, nothing else. Turn it off in Settings › General. The iPhone and iPad app is updated by the App Store.</p>
 
   <h2>Permissions</h2>
   <ul>
     <li><strong>Mac:</strong> Screen Recording, to show your windows and their sound; Accessibility, to click and type for you; Local Network, so your devices find it.</li>
-    <li><strong>iPhone and iPad:</strong> Local Network, to find your Mac; Camera, only to scan the pairing code.</li>
+    <li><strong>iPhone and iPad:</strong> Local Network, to find your Mac; Camera, only to scan the pairing code; Microphone and Speech Recognition, only while you hold the voice typing mic.</li>
   </ul>
 
   <h2 id="deleting">Deleting your data</h2>
