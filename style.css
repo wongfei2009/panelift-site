@@ -208,7 +208,7 @@ ol.steps > li::before {
 .features p { color: var(--muted); }
 .site-footer p { margin: 8px 0 0; }
 
-/* The home page's use cases: one card each, a tinted glyph and a label naming who it is for. */
+/* The home page's use cases: one card each, a line drawing on top and a tinted label naming who it is for. */
 .hero h1 { text-wrap: balance; }
 .hero .lede { max-width: 36rem; margin-left: auto; margin-right: auto; text-wrap: pretty; }
 
@@ -247,7 +247,19 @@ ol.steps > li::before {
   #anywhere { --accent: #2997ff; }
 }
 
-.usecase .glyph { display: block; width: 40px; height: 40px; color: var(--accent); }
+/* Line drawings on white: multiplied into the card, so the white becomes the card's grey. In dark mode,
+   inverted with the hue turned back (black ink to light, the accent kept) and screened, so the black
+   becomes the card's dark grey. */
+.usecase .art {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 4px;
+  mix-blend-mode: multiply;
+}
+@media (prefers-color-scheme: dark) {
+  .usecase .art { filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; }
+}
 .eyebrow {
   color: var(--accent);
   font-size: 0.8rem;
