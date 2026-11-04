@@ -207,3 +207,73 @@ ol.steps > li::before {
 .features h2 { font-size: 1.15rem; margin: 0 0 6px; }
 .features p { color: var(--muted); }
 .site-footer p { margin: 8px 0 0; }
+
+/* The home page's use cases: one card each, a tinted glyph and a label naming who it is for. */
+.hero h1 { text-wrap: balance; }
+.hero .lede { max-width: 36rem; margin-left: auto; margin-right: auto; text-wrap: pretty; }
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px 0 0;
+}
+.jump a {
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 980px;
+}
+.jump a:hover { text-decoration: none; background: var(--line); }
+
+.usecase {
+  --accent: #0071e3;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 28px 26px 14px;
+  margin: 28px 0;
+  scroll-margin-top: 16px;
+}
+#coding { --accent: #30a46c; }
+#clients { --accent: #d6409f; }
+#drawing { --accent: #e5800a; }
+#anywhere { --accent: #0071e3; }
+@media (prefers-color-scheme: dark) {
+  #coding { --accent: #3dd68c; }
+  #clients { --accent: #f076c4; }
+  #drawing { --accent: #ffa94d; }
+  #anywhere { --accent: #2997ff; }
+}
+
+.usecase .glyph { display: block; width: 40px; height: 40px; color: var(--accent); }
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 14px 0 4px;
+}
+.usecase h2 { font-size: 1.6rem; margin: 0 0 10px; text-wrap: balance; }
+.usecase > p:not(.eyebrow) { font-size: 1.05rem; }
+
+ul.points { list-style: none; padding-left: 0; margin-top: 18px; }
+ul.points li {
+  position: relative;
+  padding-left: 22px;
+  margin: 10px 0;
+  color: var(--muted);
+}
+ul.points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+ul.points strong { color: var(--text); font-weight: 600; }

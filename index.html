@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Any window from your Mac, on your iPhone and iPad, with touch, a trackpad and keys. No account, no servers.">
-<title>PaneLift: your Mac’s windows on your iPhone and iPad</title>
+<meta name="description" content="Steer your AI coding agent from the couch, show clients your work on an iPad, draw on your Mac with Apple Pencil. Your Mac on your iPhone and iPad, smooth at up to 60 frames a second. No account, no servers.">
+<title>PaneLift: your Mac, in your hand</title>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PaneLift">
 <meta property="og:url" content="https://wongfei2009.github.io/panelift-site/">
-<meta property="og:title" content="PaneLift: your Mac, on your iPhone and iPad">
-<meta property="og:description" content="Any window from your Mac, on your iPhone and iPad, with touch, a trackpad and keys. No account, no servers.">
+<meta property="og:title" content="PaneLift: your Mac, in your hand">
+<meta property="og:description" content="Steer your AI coding agent from the couch, show clients your work on an iPad, draw on your Mac with Apple Pencil. No account, no servers.">
 <meta property="og:image" content="https://wongfei2009.github.io/panelift-site/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PaneLift: any window from your Mac, on your iPhone and iPad">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=2026-11-01">
+<link rel="stylesheet" href="style.css?v=2026-11-04">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -32,39 +32,69 @@
 <main>
 <section class="hero">
     <img src="icon.svg" alt="" width="112" height="112">
-    <h1>PaneLift</h1>
-    <p class="lede">Any window from your Mac, on your iPhone and iPad.</p>
+    <h1>Your Mac, in your hand.</h1>
+    <p class="lede">Keep your AI agent coding from the couch. Hand a client your work on an iPad. Draw on your Mac with Apple Pencil. PaneLift puts your Mac on your iPhone and iPad, smooth at up to 60 frames a second.</p>
     <div class="cta"><a class="button" href="download.html">Download PaneLift for Mac</a></div>
     <!-- App Store: link the app here once it is live. -->
     <p class="muted small">Free for Mac. The iPhone and iPad app is coming soon to the App Store.</p>
+    <nav class="jump" aria-label="Who it’s for">
+      <a href="#coding">AI coding</a>
+      <a href="#clients">Showing clients</a>
+      <a href="#drawing">Drawing</a>
+      <a href="#anywhere">Everyday remote</a>
+    </nav>
   </section>
 
-  <div class="features">
-    <section>
-      <h2>The whole screen is your Mac</h2>
-      <p>No toolbars or panels. Every control sits in one small pill you can drag anywhere, or fold out of the way.</p>
-    </section>
-    <section>
-      <h2>A desktop shaped like your device</h2>
-      <p>Your Mac’s Desktop appears on a display sized to your iPhone or iPad, so it fills the screen with no black bars.</p>
-    </section>
-    <section>
-      <h2>Any window, sharp and live</h2>
-      <p>Pick a window from Switch and it fills your screen. It keeps updating even when it’s covered on your Mac.</p>
-    </section>
-    <section>
-      <h2>Keys where you type</h2>
-      <p>Esc, Tab, Control, Command and the arrows sit on top of the keyboard, and typing follows your Mac’s layout, so terminals get the right keys. Or hold the mic and speak: let go, and the words are typed on your Mac.</p>
-    </section>
-    <section>
-      <h2>Touch or trackpad</h2>
-      <p>Tap to click and drag to scroll, or turn the whole screen into a trackpad that works like a Mac’s: two fingers scroll, swipe between pages, pinch and rotate, and three fingers drag. On iPad, Apple Pencil draws with pressure and tilt, like a drawing tablet.</p>
-    </section>
-    <section>
-      <h2>Private and direct</h2>
-      <p>Over Wi-Fi, a USB cable, or your own VPN away from home. No account, no server.</p>
-    </section>
-  </div>
+  <section class="usecase" id="coding">
+    <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 20l6 5-6 5M24 31h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <p class="eyebrow">For vibe coders</p>
+    <h2>Your agent keeps coding. You don’t have to sit there.</h2>
+    <p>Leave Claude Code, Codex or your editor’s agent running on your Mac, and check in from the sofa, the kitchen or the train. Read what it did, answer its question, approve the change, send the next prompt.</p>
+    <ul class="points">
+      <li><strong>Terminal keys on the keyboard.</strong> Esc, Control, Tab, the arrows, Delete and Return sit right on top of it, and typing follows your Mac’s layout.</li>
+      <li><strong>Say the prompt.</strong> Hold the mic, talk, let go: the words are typed on your Mac.</li>
+      <li><strong>Away from home too.</strong> Through your own VPN, such as Tailscale, with your Mac’s screen dark behind you if you turn on Privacy Screen.</li>
+      <li><strong>Copy and paste both ways.</strong> An error message to your phone, a link back to your Mac.</li>
+    </ul>
+  </section>
+
+  <section class="usecase" id="clients">
+    <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="5" width="30" height="38" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 31l7-8 5 5 3-3 4 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="15" r="3" fill="currentColor"/></svg>
+    <p class="eyebrow">For designers</p>
+    <h2>Hand your client the iPad, not your Mac.</h2>
+    <p>Your work stays on the Mac Studio, Mac mini or MacBook where it lives. Pick the one window you want to show and it fills the iPad, sharp and live, ready to pass across the table.</p>
+    <ul class="points">
+      <li><strong>Only that window.</strong> Not your desktop, your other apps or your messages.</li>
+      <li><strong>Live, not a screenshot.</strong> Change something on your Mac and they see it at once, even with the window covered on your Mac.</li>
+      <li><strong>Theirs to explore.</strong> They pinch to zoom in, up to five times, or tap through your prototype.</li>
+      <li><strong>Sharp lines.</strong> Optimize for Drawing or Text, and every still moment is redrawn at full detail.</li>
+    </ul>
+  </section>
+
+  <section class="usecase" id="drawing">
+    <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><path d="M31 7l10 10-21 21-12 2 2-12z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M27 11l10 10" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+    <p class="eyebrow">For artists</p>
+    <h2>Your iPad becomes your Mac’s drawing tablet.</h2>
+    <p>Apple Pencil’s pressure and tilt reach your Mac as a tablet’s pen, so the brushes you know in your Mac’s drawing apps respond to how you draw. No second tablet on the desk.</p>
+    <ul class="points">
+      <li><strong>Pressure and tilt.</strong> In apps that read a tablet’s pen, such as Krita.</li>
+      <li><strong>Plug in for the quickest stroke.</strong> Over a USB cable the picture keeps 60 frames a second, with nothing in the way.</li>
+      <li><strong>Your canvas, edge to edge.</strong> The window fills the iPad, and pinch, rotate and smart zoom work as on a Mac’s trackpad.</li>
+    </ul>
+  </section>
+
+  <section class="usecase" id="anywhere">
+    <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30c6-12 12-12 18 0s12 12 18 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M6 18c6-12 12-12 18 0s12 12 18 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".45"/></svg>
+    <p class="eyebrow">For everyone</p>
+    <h2>Your whole Mac, smooth as sitting in front of it.</h2>
+    <p>Apple’s own video hardware on both ends, up to 60 frames a second, and a desktop shaped like your iPhone or iPad so it fills the screen with no black bars.</p>
+    <ul class="points">
+      <li><strong>A real trackpad.</strong> Turn the screen into one: two fingers scroll and swipe between pages, pinch and rotate, three fingers drag.</li>
+      <li><strong>One pill, nothing else.</strong> Every control in one small pill you drag anywhere or fold away.</li>
+      <li><strong>Your Mac’s sound</strong>, in beta.</li>
+      <li><strong>Private and direct.</strong> Wi-Fi, a USB cable or your own VPN. No account, no servers, no subscription.</li>
+    </ul>
+  </section>
 
   <h2>Get started</h2>
   <ol class="steps">
